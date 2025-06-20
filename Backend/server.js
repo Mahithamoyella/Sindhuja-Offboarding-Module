@@ -208,5 +208,5 @@ app.delete('/api/offboarding', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server running at http://52.91.213.63:${port}`);
+    console.log(`Server running at http://54.81.30.45:${port}`);
 });
