@@ -7,7 +7,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3005
+EXPOSE 3054
 
 CMD ["node", "server.js"]
 
