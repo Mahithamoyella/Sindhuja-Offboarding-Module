@@ -7,10 +7,10 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin834
+      POSTGRES_PASSWORD: admin123
       POSTGRES_DB: offboarding_db
     ports:
-      - "5437:5432"
+      - "5207:5432"
     volumes:
       - postgres-offboarding-data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -20,7 +20,7 @@ services:
     container_name: backend-offboarding
     restart: always
     ports:
-      - "3005:3005"
+      - "3207:3207"
     depends_on:
       - postgres
 
@@ -29,7 +29,7 @@ services:
     container_name: employee-offboardinh
     restart: always
     ports:
-      - "8008:80"
+      - "8013:80"
     depends_on:
       - backend
 
@@ -38,7 +38,7 @@ services:
     container_name: hr-offboarding
     restart: always
     ports:
-      - "8009:80"
+      - "8014:80"
     depends_on:
       - backend
 
