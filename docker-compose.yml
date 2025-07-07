@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:14
-    container_name: postgres-offboarding
+    container_name: postgres-offboarding1
     restart: always
     environment:
       POSTGRES_USER: postgres
@@ -17,7 +17,7 @@ services:
 
   backend:
     build: ./Backend
-    container_name: backend-offboarding
+    container_name: backend-offboarding11
     restart: always
     ports:
       - "3207:3207"
@@ -26,7 +26,7 @@ services:
 
   employee-offboardinh:
     build: ./Employee-offboardinh
-    container_name: employee-offboardinh
+    container_name: employee-offboardinh11
     restart: always
     ports:
       - "8013:80"
@@ -35,7 +35,7 @@ services:
 
   hr-offboarding:
     build: ./HR-offboarding
-    container_name: hr-offboarding
+    container_name: hr-offboarding2
     restart: always
     ports:
       - "8014:80"
